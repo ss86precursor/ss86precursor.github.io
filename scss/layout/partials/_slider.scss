@@ -1,0 +1,132 @@
+#top-slider {
+  border-radius: $round-l-tb;
+  .owl-controls {
+    position: relative;
+    .owl-dots {
+      position: absolute;
+      top: -30px;
+      width: 100%;
+      text-align: center;
+      .owl-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $black;
+        box-shadow: 0 0 6px 0 $white;
+        margin: 0 3px;
+        @include opacity(0.6);
+        &.active {
+          background-color: $dots;
+          border: $border-black;
+          width: 9px;
+          height: 9px;
+          @include opacity(0.9);
+        }
+      }
+    }
+  }
+}
+
+.owl-carousel {
+  .owl-item {
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      border-radius: $round-l-tb;
+    }
+  }
+}
+
+#user-carousel {
+  .item {
+    position: relative;
+    & > img {
+      width: 100%;
+      border-radius: 0;
+    }
+    .item_bg {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: 0.3s;
+      font-size: 16px;
+      color: $white;
+      padding: 10px 0;
+      text-align: center;
+      .icon {
+        @include pseudo-block(absolute);
+        background-repeat: no-repeat;
+        width: 19px;
+        height: 19px;
+        bottom: 10px;
+        @include opacity(0.5);
+        @include transition-all(.3s);
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+        &.left_icon {
+          left: 13px;
+        }
+        &.right_icon {
+          right: 13px;
+        }
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.user-slider {
+  width: auto;
+  height: 70px;
+  margin: 20px 0 0 80px;
+  .item {
+    margin-right: 0;
+  }
+  .owl-stage-outer {
+    height: 70px;
+  }
+  .owl-nav {
+    width: 100%;
+    top: 25px;
+    position: absolute;
+    .owl-prev {
+      position: absolute;
+      left: -34px;
+      font-size: 0;
+      @include before-absolute {
+        @include icon(prev);
+      }
+      &:hover {
+        &:before {
+          @include opacity(0.8);
+          @include transition-all(.5s);
+        }
+      }
+    }
+    .owl-next {
+      position: absolute;
+      right: -10px;
+      font-size: 0;
+      @include after-absolute {
+        @include icon(next);
+      }
+      &:hover {
+        &:after {
+          @include opacity(0.8);
+          @include transition-all(.5s);
+        }
+      }
+    }
+  }
+}

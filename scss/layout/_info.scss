@@ -1,0 +1,61 @@
+.info-block {
+  min-height: 450px;
+  color: $gray-dk;
+  @include clearfix;
+}
+.container-text-block {
+  margin-top: 14px;
+  line-height: $lh-lg;
+  max-width: 300px;
+  width: 100%;
+  font-weight: 400;
+  .glob-txt-bottom {
+    margin-bottom: 18px;
+  }
+  .bottom-m {
+    margin-bottom: 7px;
+  }
+  .small-size-txt {
+    font-size: $fs-xs;
+    color: $gray-ex;
+  }
+  .block-orange-text {
+    color: $orange;
+    padding-left: 18px;
+    line-height: $lh-sm;
+    position: relative;
+    @include before-absolute {
+      border-left: $border-orange-md;
+      height: 100%;
+      left: 0;
+    }
+  }
+  .link-more {
+    float: right;
+    position: relative;
+    margin-top: $margin-sm;
+    padding-left: $margin-sm;
+    @include before-absolute {
+      @include icon(arrow-right);
+      left: 0;
+      top: 8px;
+    }
+  }
+  .quote-block {
+    font-style: italic;
+    padding: 18px;
+    color: $gray-ex;
+    line-height: $lh-xs;
+    position: relative;
+    @include before-absolute {
+      @include icon(up);
+      left: -5px;
+      top: 14px;
+    }
+    @include after-absolute {
+      @include icon(down);
+      right: 0;
+      bottom: 14px;
+    }
+  }
+}

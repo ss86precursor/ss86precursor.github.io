@@ -1,0 +1,54 @@
+.align-left {
+  text-align: left !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.align-center {
+  text-align: center !important;
+}
+
+.tt,
+.tt-u {
+    text-transform: uppercase!important;
+}
+
+.text-sm {
+    font-size: $fs-sm!important;
+}
+
+.text-md {
+    font-size: $fs-md!important;
+}
+
+.text-lg {
+    font-size: $fs-lg!important;
+}
+
+.text-title-sm {
+    font-size: $fs-title-sm!important;
+}
+
+.text-title {
+    font-size: $fs-title-md!important;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.multiline {
+    white-space: normal!important;
+}
+
+.link-text {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    @include on-state {
+        color: inherit;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,10 @@
+header {
+  margin: $margin-md 0 $margin-sm;
+  height: 82px;
+  .logo {
+    img {
+      margin: 0 auto;
+      padding-left: 30px;
+    }
+  }
+}

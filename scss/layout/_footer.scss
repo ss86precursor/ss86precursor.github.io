@@ -1,0 +1,26 @@
+footer {
+  min-height: 100px;
+  @include clearfix;
+  hr {
+    border: none;
+    height: 1px;
+    background-color: $bg-gray;
+    margin: 0 $margin-sm;
+  }
+}
+
+.footer-logo-block {
+  margin-top: $margin;
+}
+.copyright-block {
+  text-align: right;
+  font-size: $fs-title-xs;
+  margin-top: $margin;
+  font-weight: 300;
+  span, .year > h3 {
+    color: $gray-ex;
+  }
+  .year {
+    font-weight: 100;
+  }
+}

@@ -1,0 +1,77 @@
+@mixin row-inline {
+    font-size: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    >[class*='col-'] {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        font-size: $fs-base;
+    }
+}
+
+.col {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-inline {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.row-inline {
+    @include row-inline;
+}
+
+.block-highlight {
+    padding: 15px 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: $margin;
+    background: $bg-gray;
+    &>.block-title {
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+}
+
+.no-padding {
+  padding: 0!important;
+}
+
+.block-padding-sm {
+    @include padding-v($margin/2);
+}
+
+.block-padding {
+    @include padding-v($margin);
+}
+
+.block-padding-lg {
+    @include padding-v($margin*2);
+}
+
+@media (min-width: 768px) {
+    .row-inline-sm {
+        @include row-inline;
+    }
+}
+
+@media (min-width: 992px) {
+    .row-inline-md {
+        @include row-inline;
+    }
+    .col-md-offset-15 {
+        margin-left: 12.5%;
+    }
+}
+
+@media (max-width: 767px) {
+    .out-of-row-xs {
+        @include margin-h(-15px);
+    }
+}

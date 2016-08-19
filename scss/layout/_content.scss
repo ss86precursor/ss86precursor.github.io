@@ -1,0 +1,28 @@
+.content {
+  min-height: 400px;
+  color: $gray-dk;
+  @include clearfix;
+}
+.container-content-block {
+  margin-top: 45px;
+}
+.circle-shape-example {
+  .curve {
+    float: left;
+    margin: 0 15px 0 -10px;
+    border-radius: 50%;
+    shape-outside:circle();
+  }
+  p {
+    text-align: justify;
+    font-weight: 400;
+    margin: $margin 0;
+  }
+}
+
+.right-block-content {
+  min-height: 340px;
+  h3 {
+    margin-left: 77px;
+  }
+}

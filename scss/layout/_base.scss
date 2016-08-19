@@ -1,0 +1,91 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  padding: 0;
+  margin: 0;
+}
+fieldset, img {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ol, ul {
+  list-style: none;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-weight: normal;
+  font-style: normal;
+}
+caption, th {
+  text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+h3 {
+  font-size: 31px;
+  color: $gray-dk;
+  font-weight: 100;
+}
+
+q:before, q:after {
+  content: '';
+}
+abbr, acronym {
+  border: 0;
+}
+
+* {
+  outline: none;
+}
+
+html {
+  font-size: $fs-base;
+}
+
+body {
+  font-family: $source-sans-pro;
+  font-weight: 100;
+  position: relative;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: $orange;
+  text-decoration: underline;
+  @include on-state {
+    text-decoration: none;
+  }
+}
+
+@include padding(left, none);
+@include padding(right, none);
+
+#top-slider, .auth-form {
+  min-height: 467px;
+  background-color: $bg-gray-lt;
+}
+
+.slider {
+  border-radius: $round-l-tb;
+  img {
+    border-radius: inherit;
+  }
+}
+
+.auth-form {
+  border-radius: $round-r-tb;
+}

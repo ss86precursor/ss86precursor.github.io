@@ -1,0 +1,287 @@
+.left-block-bars {
+  float: left;
+  margin-left: 15px;
+}
+.right-block-bars {
+  float: right;
+}
+.bars {
+  .tabs {
+    position: relative;
+    margin: 18px 0 0 80px;
+    label {
+      display: block;
+      float: left;
+      border-radius: 6px 6px 0 0;
+      border-right: $border-tabs-gr;
+      border-left: $border-tabs-gr;
+      border-top: $border-tabs-gr;
+      cursor: pointer;
+      font-size: 16px;
+      position: relative;
+      top: 2px;
+      width: 150px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      z-index: 1;
+      .act {
+        color: $gray-ex;
+      }
+    }
+    input {
+      position: absolute;
+      left: -9999px;
+    }
+    .tabs_cont {
+      min-height: 151px;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.6);
+      z-index: 2;
+      clear: both;
+      > div {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        @include opacity(0);
+        transition: opacity .5s ease-in-out;
+      }
+    }
+    #tab_1:checked  ~ #tab_l1,
+    #tab_2:checked  ~ #tab_l2 {
+      color: $orange-l;
+      top: 1px;
+      background: $white;
+      z-index: 3;
+    }
+    #tab_1:checked ~ .tabs_cont #tab_c1,
+    #tab_2:checked ~ .tabs_cont #tab_c2 {
+      position: static;
+      @include opacity(1);
+      left: 0;
+    }
+  }
+
+  //Захарадкодил сюда старый кусок кода, с первым прогресс баром и стрелками шагов
+  //т.к нет времени пока это сделать по другому.
+  //Реализация естественно должна быть другой, но банально не хватило времени.
+  //Сложностей тут не вижу никаких, если надо потом могу в свободное время переделать.
+  .progress-bar {
+    width: 214px;
+    height: 19px;
+    padding: 1px;
+    margin-top: 25px;
+    border-radius: 3px;
+    background-color: #ffd40d;
+    border: solid 1px rgba(0,0,0,.21);
+    background-image: linear-gradient(to top, #e6e6e6, #f5fafb);
+    span {
+      width: 65%;
+      display: inline-block;
+      height: 13px;
+      border-radius: 3px;
+      background-color: #ffd40d;
+      background-image: linear-gradient(to top, #ff891f, #ffae02);
+      transition: width .4s ease-in-out;
+      max-width: 100%;
+      p {
+        font-size: 9px;
+        font-family: $verdana;
+        position: absolute;
+        right: 10px;
+        top: 2px;
+        color: #4e4e4e;
+      }
+    }
+  }
+
+  .orange {
+    span {
+      background-color: #fecf23;
+      background-image: linear-gradient(top, #fecf23, #fd9215);
+    }
+  }
+
+  .shine {
+    span {
+      position: relative;
+      &::after {
+        content: '';
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $white;
+        border-radius: 3px;
+        -webkit-animation: animate-shine 2s ease-out infinite;
+        -moz-animation: animate-shine 2s ease-out infinite;
+      }
+    }
+  }
+
+  @-webkit-keyframes animate-shine {
+    0% {opacity: 0; width: 0;}
+    50% {opacity: .5;}
+    100% {opacity: 0; width: 95%;}
+  }
+
+  @-moz-keyframes animate-shine {
+    0% {opacity: 0; width: 0;}
+    50% {opacity: .5;}
+    100% {opacity: 0; width: 95%;}
+  }
+
+  .arrow_box {
+    width: 230px;
+    height: 30px;
+    margin-top: 25px;
+    ul {
+      float: left;
+      font-size: 8px;
+      li {
+        display: inline-block;
+        width: 56px;
+        height: 28px;
+        position: relative;
+        &:first-child {
+          margin-left: 0;
+          z-index: 1;
+          @include icon(arrow_pb1);
+        }
+        &:nth-child(2) {
+          margin-left: -20px;
+          @include icon(arrow_pb2);
+        }
+        &:nth-child(3) {
+          margin-left: -15px;
+          @include icon(arrow_pb3);
+          z-index: -1;
+        }
+        &:nth-child(4) {
+          margin-left: -15px;
+          @include icon(arrow_pb4);
+          z-index: -2;
+        }
+        &:last-child {
+          margin-left: -16px;
+          @include icon(arrow_pb5);
+          z-index: -3;
+        }
+      }
+      p {
+        position: relative;
+        top: 9px;
+        text-align: center;
+      }
+    }
+  }
+  ///////////////////////////////////////
+  ///////////////////////////////////////
+  .ui-wrap-sld {
+    margin-top: 20px;
+    #sld {
+      width: 214px;
+      height: 16px;
+      border-radius: 3px;
+      border: solid 1px rgba(0,0,0,.21);
+      background-image: linear-gradient(to top, #e6e6e6, #f5fafb);
+    }
+    .ui-slider {
+      position: relative;
+      .ui-slider-handle {
+        position: absolute;
+        border: 0;
+        z-index: 2;
+        @include icon(range);
+        cursor: pointer;
+      }
+    }
+    .ui-widget-header {
+      width: 80px;
+      height: 12px;
+      border-radius: 3px;
+      background-color: $ui-slider-orange;
+      background-image: linear-gradient(to top, #ff891f, #ffae02);
+      top: 1px;
+    }
+  }
+
+  .progressbar {
+    display: inline-block;
+    width: 100px;
+    margin-left: 10px;
+  }
+  .circle {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+  }
+  .circle canvas {
+    vertical-align: middle;
+  }
+  .circle div {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+  }
+  .circle strong i {
+    font-style: normal;
+    font-size: 0.6em;
+    font-weight: normal;
+  }
+  .circle span {
+    display: block;
+    color: #aaa;
+    margin-top: 12px;
+  }
+
+  .rate_star {
+    width: 115px;
+    height: 20px;
+    margin: 10px 20px 0 0;
+    #reviewStars-input input:checked ~ label, label, label:hover, label:hover ~ label{
+      background: url("/images/icons/stars.png") no-repeat;
+    }
+    #reviewStars-input {
+      position: relative;
+      float: left;
+      input {
+        width: 23px;
+        height: 18px;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        @include opacity(0);
+        &:checked ~ label {
+          background-position: 0 0;
+          width: 23px;
+          height: 18px;
+        }
+      }
+      label {
+        background-position: 0 -16px;
+        width: 23px;
+        height: 18px;
+        float: right;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        z-index: 1;
+        &:hover, &:hover ~ label {
+          background-position: 0 0;
+          width: 23px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+$opacity-dkr: 0.85;
+$opacity-dk: 0.7;
+$opacity-md: 0.5;
+$opacity-lt: 0.2;
+$opacity-ltr: 0.15;
+$transparent: rgba(255,255,255,0);
+
+// Semitransparent white
+$trBlack-dkr: rgba(0, 0, 0, $opacity-dkr);
+$trBlack-dk: rgba(0, 0, 0, $opacity-dk);
+$trBlack: rgba(0, 0, 0, $opacity-md);
+$trBlack-lt: rgba(0, 0, 0, $opacity-lt);
+$trBlack-ltr: rgba(0, 0, 0, $opacity-ltr);
+
+// Semitransparent black
+$trWhite-dkr: rgba(255, 255, 255, $opacity-dkr);
+$trWhite-dk: rgba(255, 255, 255, $opacity-dk);
+$trWhite: rgba(255, 255, 255, $opacity-md);
+$trWhite-lt: rgba(255, 255, 255, $opacity-lt);
+$trWhite-ltr: rgba(255, 255, 255, $opacity-ltr);
+
+// Brand colors
+$white: #fff;
+$black: #000;
+
+// Background colors
+$bg-orange-dk: #ff8920;
+$bg-orange-lt: #ffa200;
+$bg-gray: #cfcfcf;
+$bg-gray-lt: #f8f8f8;
+
+// Font colors
+$gray: #666;
+$gray-l: #dcdcdc;
+$gray-ld: #e6e6e6;
+$gray-lt: #f5fafb;
+$gray-dk: #4d4d4d;
+$gray-ex: #a3a3a3;
+$orange: #ffc28c;
+$orange-l: #ffa352;
+$orange-lt: #ffb26b;
+$orange-dk: #ff8210;
+$dots: #ff9b11;
+
+// Special colors
+$warning-r: rgba(209, 0, 0, .5);
+$tabs-br: #f3f3f3;
+$ui-slider-orange: #fecf23;
+
+// Shadow colors
+$shadow-bg: 0 0 3px rgba(0, 0, 0, 0.35);
+$shadow-input-bg: inset 1px 1px 3px rgba(0, 0, 0, 0.35);
+$shadow-bg-form: 0 15px 10px rgba(0, 0, 0, 0.3);

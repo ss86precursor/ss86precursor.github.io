@@ -1,0 +1,152 @@
+@media all and (max-width: 1365px) {
+  .message {
+    .tooltips {
+      margin-left: -200px;
+      z-index: 99;
+      @include after-absolute {
+        left: 100%;
+        border-left: $border-black-bold;
+        border-right: none;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 992px) {
+  header {
+    logo {
+      margin-left: 0;
+    }
+  }
+  .slider {
+    min-height: initial;
+    .owl-carousel {
+      .owl-item {
+        img {
+          width: 100%;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  .auth-form {
+    border-radius: 0;
+    h2 {
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+  form {
+    margin: $margin-md auto 0;
+  }
+  .container-content-block {
+    margin-bottom: $margin;
+    .left-content-block {
+      min-height: 250px;
+    }
+    .right-block-content {
+      h3, .bars .tabs {
+        margin-left: 0;
+      }
+      .user-slider {
+        max-width: 400px;
+        margin-left: 40px;
+      }
+      .bars {
+        max-width: 440px;
+        width: 100%;
+      }
+    }
+  }
+  .info-block {
+    padding-bottom: $margin-lg;
+  }
+  .container-text-block {
+    max-width: none;
+    margin: 0;
+    .bottom-m {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+@media all and (max-width: 767px) {
+  .footer-logo-block {
+    img {
+      margin: 0 auto;
+    }
+  }
+  .copyright-block {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .auth-form {
+    padding-bottom: 30px;
+    h2 {
+      font-size: 32px;
+    }
+  }
+  #top-slider {
+    min-height: initial;
+  }
+  form {
+    max-width: 320px;
+  }
+  .form-group {
+    .container-fields {
+      margin-left: 0;
+    }
+  }
+}
+
+@media all and (max-width: 414px) {
+  .container-content-block {
+    .right-block-content {
+      .user-slider {
+        max-width: 240px;
+      }
+    }
+  }
+  .right-block-bars {
+    width: 100%;
+    float: none;
+    clear: both;
+    padding-bottom: $margin;
+  }
+}
+
+@media all and (max-width: 360px) {
+  form {
+    max-width: 245px;
+  }
+  .form-group {
+    .search, .looking-choice {
+      float: none;
+      clear: both;
+    }
+  }
+  .container-fields {
+    select{
+      &[name="day"],
+      &[name="month"],
+      &[name="year"] {
+        max-width: 260px;
+        width: 100%;
+        margin-bottom: $margin-md;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .container-content-block {
+    .right-block-content {
+      .user-slider {
+        margin-left: 30px;
+      }
+    }
+  }
+}
